@@ -1,0 +1,10 @@
+[user]
+	email = you@example.com
+	name = astsu
+[alias]
+	st = status
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	co = checkout
+	br = branch
+[init]
+	defaultBranch = main
