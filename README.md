@@ -3,6 +3,7 @@
 ## Screenshots
 
 <img src="https://github.com/astsu-dev/dotfiles/raw/main/screenshots/desktop.png">
+<img src="https://github.com/astsu-dev/dotfiles/raw/main/screenshots/app_menu.png">
 <img src="https://github.com/astsu-dev/dotfiles/raw/main/screenshots/editor.png">
 <img src="https://github.com/astsu-dev/dotfiles/raw/main/screenshots/system_info.png">
 
