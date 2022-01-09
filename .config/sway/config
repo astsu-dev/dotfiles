@@ -238,8 +238,8 @@ bar {
     #
     default_border pixel 2
     default_floating_border pixel 2 
-    client.focused "#515867" "#515867" "#515867" 
-    client.unfocused "#2c3038" "#2c3038" "#2c3038" 
+    client.focused "#515867" "#515867" "#515867" "#515867"
+    client.unfocused "#2c3038" "#2c3038" "#2c3038" "#2c3038"
     # Borders will only be enabled if the workspace has more than one visible child
     # smart_borders on
     #
