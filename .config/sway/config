@@ -231,8 +231,15 @@ bar {
 }
 
 # Window style
-default_border none
-default_floating_border none
+## Borders
+default_border pixel 2
+default_floating_border pixel 2 
+client.focused "#515867" "#515867" "#515867" 
+client.unfocused "#2c3038" "#2c3038" "#2c3038" 
+smart_borders on
+## Gaps
+gaps inner 5 # Borders will only be enabled if the workspace has more than one visible child
+smart_gaps on # Gaps will only be enabled if the workspace has more than one visible child
 
 # Notifications
 exec mako
