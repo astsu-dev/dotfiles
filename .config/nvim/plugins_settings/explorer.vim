@@ -35,7 +35,7 @@ require'nvim-tree'.setup {
   },
   filters = {
     dotfiles = false,
-    custom = {}
+    custom = { ".git", ".venv", "__pycache__", ".mypy_cache" }
   },
   git = {
     enable = true,
