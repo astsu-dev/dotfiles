@@ -230,18 +230,28 @@ bar {
     swaybar_command waybar
 }
 
+#
 # Window style
-## Borders
-default_border pixel 2
-default_floating_border pixel 2 
-client.focused "#515867" "#515867" "#515867" 
-client.unfocused "#2c3038" "#2c3038" "#2c3038" 
-smart_borders on
-## Gaps
-gaps inner 5 # Borders will only be enabled if the workspace has more than one visible child
-smart_gaps on # Gaps will only be enabled if the workspace has more than one visible child
+#
+    #
+    # Borders
+    #
+    default_border pixel 2
+    default_floating_border pixel 2 
+    client.focused "#515867" "#515867" "#515867" 
+    client.unfocused "#2c3038" "#2c3038" "#2c3038" 
+    # Borders will only be enabled if the workspace has more than one visible child
+    # smart_borders on
+    #
+    # Gaps
+    #
+    gaps inner 5
+    # Gaps will only be enabled if the workspace has more than one visible child
+    # smart_gaps on
 
+#
 # Notifications
-exec mako
+#
+    exec mako
 
 include /etc/sway/config.d/*
