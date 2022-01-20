@@ -26,7 +26,7 @@ set $display2 HDMI-A-1
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/wallpapers/neon.png fill
+output * bg ~/wallpapers/wallpaper.png fill
 
 output $display1 pos 1920 0 res 1920x1080
 output $display2 pos 0 0 res 1920x1080
