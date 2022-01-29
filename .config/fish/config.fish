@@ -7,7 +7,7 @@ alias lr=clear
 alias v=nvim
 alias vim=nvim
 alias oldvim="\vim"
-alias cat=pygmentize
+alias ccat=pygmentize
 
 # Pyenv init
 status is-login; and pyenv init --path | source
