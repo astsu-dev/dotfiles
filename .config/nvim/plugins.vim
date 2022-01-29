@@ -13,6 +13,7 @@ Plug 'ray-x/lsp_signature.nvim' " Function signatures
 Plug 'vim-airline/vim-airline' " Status line
 Plug 'tpope/vim-commentary' " Comment lines
 Plug 'jiangmiao/auto-pairs' " Autoclose brackets
+Plug 'airblade/vim-gitgutter' " Git diff in sign column
 
 " Explorer
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
