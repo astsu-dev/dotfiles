@@ -21,6 +21,9 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown preview
 
+" Syntax highlighting
+Plug 'tomlion/vim-solidity'
+
 " Colorschemes
 Plug 'fxn/vim-monochrome'
 Plug 'ghifarit53/tokyonight-vim'
