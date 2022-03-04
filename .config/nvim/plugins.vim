@@ -13,6 +13,7 @@ Plug 'ray-x/lsp_signature.nvim' " Function signatures
 Plug 'vim-airline/vim-airline' " Status line
 Plug 'tpope/vim-commentary' " Comment lines
 Plug 'jiangmiao/auto-pairs' " Autoclose brackets
+Plug 'airblade/vim-gitgutter' " Git diff in sign column
 Plug 'mattn/emmet-vim' " HTML emmet
 
 " Explorer
@@ -20,6 +21,9 @@ Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown preview
+
+" Syntax highlighting
+Plug 'tomlion/vim-solidity'
 
 " Colorschemes
 Plug 'fxn/vim-monochrome'
