@@ -136,9 +136,11 @@ window#waybar.chromium {
 }
 
 #temperature {
+    color: #5faeef;
 }
 
 #temperature.critical {
+    color: #bf616a; 
 }
 /**/
 

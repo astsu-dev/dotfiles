@@ -1,4 +1,28 @@
-local nvim_lsp = require('lspconfig')
+set completeopt=menu,menuone,noselect
+
+lua << EOF
+local cmp = require'cmp'
+local lsp_signature = require'lsp_signature'
+local nvim_lsp = require'lspconfig'
+
+-- nvim-cmp
+cmp.setup({
+mapping = {
+  ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+  ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+  ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+  ['<C-e>'] = cmp.mapping({
+    i = cmp.mapping.abort(),
+    c = cmp.mapping.close(),
+  }),
+  ['<C-Space>'] = cmp.mapping.confirm({ select = true }),
+},
+sources = cmp.config.sources({
+  { name = 'nvim_lsp' },
+}, {
+  { name = 'buffer' },
+})
+})
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -14,8 +38,8 @@ local on_attach = function(client, bufnr)
   local opts = { noremap=true, silent=true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gD', '<cmd>tab split | lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<cmd>tab split | lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
@@ -32,6 +56,14 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
+  -- Function signatures
+  lsp_signature.on_attach({
+    bind = true,
+    handler_opts = {
+      border = "none",
+      hint_prefix = "λ "
+    }
+  })
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
@@ -45,3 +77,4 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+EOF
