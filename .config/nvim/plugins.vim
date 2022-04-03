@@ -24,6 +24,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markd
 
 " Syntax highlighting
 Plug 'tomlion/vim-solidity'
+Plug 'edgedb/edgedb-vim'
 
 " Colorschemes
 Plug 'fxn/vim-monochrome'
