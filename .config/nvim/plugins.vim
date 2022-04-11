@@ -3,11 +3,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'neovim/nvim-lspconfig' " LSP
 
 " Autocompletion
+Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
+Plug 'L3MON4D3/LuaSnip' " Snippets
+Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
 Plug 'ray-x/lsp_signature.nvim' " Function signatures
 
 Plug 'vim-airline/vim-airline' " Status line

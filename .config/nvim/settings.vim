@@ -10,6 +10,11 @@ set shiftwidth=4
 set smarttab
 set expandtab " Spaces instead tabs
 set autoindent
+" Tabs for specific file types
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
+autocmd Filetype typescript setlocal tabstop=2 shiftwidth=2
+autocmd Filetype javascriptreact setlocal tabstop=2 shiftwidth=2
+autocmd Filetype typescriptreact setlocal tabstop=2 shiftwidth=2
 
 " Words wrap
 set wrap

@@ -1,27 +1,37 @@
 set completeopt=menu,menuone,noselect
+nnoremap <leader>lr :LspRestart<CR>
 
 lua << EOF
 local cmp = require'cmp'
 local lsp_signature = require'lsp_signature'
 local nvim_lsp = require'lspconfig'
+local luasnip = require'luasnip'
 
 -- nvim-cmp
 cmp.setup({
-mapping = {
-  ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-  ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-  ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-  ['<C-e>'] = cmp.mapping({
-    i = cmp.mapping.abort(),
-    c = cmp.mapping.close(),
-  }),
-  ['<C-Space>'] = cmp.mapping.confirm({ select = true }),
-},
-sources = cmp.config.sources({
-  { name = 'nvim_lsp' },
-}, {
-  { name = 'buffer' },
-})
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  mapping = {
+    ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+    ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+    ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+    ['<C-e>'] = cmp.mapping({
+      i = cmp.mapping.abort(),
+      c = cmp.mapping.close(),
+    }),
+    ['<C-Space>'] = cmp.mapping.confirm({ select = true }),
+  },
+  sources = cmp.config.sources(
+    {
+      { name = 'nvim_lsp' },
+    }, 
+    {
+      { name = 'buffer' },
+    }
+  )
 })
 
 -- Use an on_attach function to only map the following keys
@@ -64,11 +74,12 @@ local on_attach = function(client, bufnr)
       hint_prefix = "λ "
     }
   })
+
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright' }
+local servers = { 'pyright', 'tsserver' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
