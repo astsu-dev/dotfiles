@@ -81,7 +81,8 @@ window#waybar.chromium {
 #idle_inhibitor,
 #language,
 #mpd,
-#custom-bitcoin-price {
+#custom-bitcoin-price,
+#custom-gpu {
     padding: 0 10px;
     margin: 0 2px;
     color: #adb1b9;
@@ -112,8 +113,6 @@ window#waybar.chromium {
 }
 
 #cpu {
-    /* border-radius: 15px; */
-    /* background-color: #2c3038; */
     color: #5faeef;
 }
 
@@ -133,6 +132,10 @@ window#waybar.chromium {
 
 #custom-bitcoin-price {
     color: #d19a66; 
+}
+
+#custom-gpu {
+    color: #a3be8c; 
 }
 
 #temperature {

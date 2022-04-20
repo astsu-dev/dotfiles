@@ -5,24 +5,8 @@
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    /* "modules-center": ["sway/window"], */
-    "modules-center": [],
-    "modules-right": ["temperature", "custom/bitcoin-price", "pulseaudio", "network", "cpu", "memory", "sway/language", "clock", "tray"],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}", "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    // "modules-center": [],
+    "modules-right": [ "custom/bitcoin-price", "pulseaudio", "network", "cpu", "custom/gpu", "temperature", "memory", "sway/language", "clock", "tray"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -80,20 +64,20 @@
         "interval": 1
     },
     "cpu": {
-        "format": "<big></big>  CPU {usage}%",
+        "format": "  CPU {usage}%",
         "tooltip": false,
         "interval": 5
     },
     "memory": {
-        "format": "<big>﬙</big>  {used:0.1f} GB",
+        "format": "﬙  {used:0.1f} GB",
         "interval": 5
     },
     "temperature": {
         // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "hwmon-path": "/sys/class/drm/card0/device/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "🔥 {temperatureC}°C",
-        "format": "❄️ {temperatureC}°C",
+        "format-critical": "🔥 {temperatureC}°C",
+        "format": "GPU {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "backlight": {
@@ -120,7 +104,8 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        // "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ",
         "format-ethernet": "Connected",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected",
@@ -158,10 +143,15 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
+    "custom/gpu": {
+        "interval": 1,
+        "exec": "~/.config/waybar/modules/get_gpu_usage.sh",
+        "format": "GPU {}%"
+    },
     "custom/bitcoin-price": {
         "interval": 10,
         "exec": "~/.config/waybar/modules/bitcoin_price.sh",
-        "format": "₿ ${}",
+        "format": "₿ ${}"
     }
 }
 
