@@ -15,4 +15,4 @@ status is-login; and pyenv init --path | source
 pyenv init - | source
 
 # Nvm init
-nvm use 16.13.1 > /dev/null
+nvm use 16.15.0 > /dev/null
