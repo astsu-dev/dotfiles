@@ -150,7 +150,7 @@
     "custom/bitcoin-price": {
         "interval": 10,
         "exec": "~/.config/waybar/modules/bitcoin_price.sh",
-        "format": "₿ ${}"
+        "format": "${}"
     }
 }
 

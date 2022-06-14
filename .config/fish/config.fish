@@ -9,6 +9,7 @@ alias vim=nvim
 alias oldvim="\vim"
 alias ccat=pygmentize
 alias lock="swaylock -c 000000"
+alias hx=helix
 
 # Pyenv init
 status is-login; and pyenv init --path | source
