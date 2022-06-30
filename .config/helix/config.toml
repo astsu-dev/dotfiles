@@ -1,2 +1,7 @@
+theme = "mytheme"
+
 [keys.insert]
 j = { k = "normal_mode" }
+
+[editor]
+line-number = "relative"
