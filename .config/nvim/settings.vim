@@ -24,7 +24,7 @@ set linebreak
 set number
 set relativenumber
 set ruler
-set colorcolumn=80
+" set colorcolumn=80  # Colored column
 
 " Encoding
 set ff=unix
