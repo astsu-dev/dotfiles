@@ -160,8 +160,7 @@ formatters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-  { "Mofiqul/dracula.nvim" },
-  { "ghifarit53/tokyonight-vim" }
+  { "ghifarit53/tokyonight-vim" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
