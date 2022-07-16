@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     // "modules-center": [],
-    "modules-right": [ "custom/bitcoin-price", "pulseaudio", "network", "cpu", "custom/gpu", "temperature", "memory", "sway/language", "clock", "tray"],
+    "modules-right": [ "custom/bitcoin-price", "pulseaudio", "network", "cpu", "custom/gpu", "temperature", "memory", "disk", "sway/language", "clock", "tray"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -63,20 +63,23 @@
         "interval": 1
     },
     "cpu": {
-        "format": "  CPU {usage}%",
+        "format": " CPU {usage}%",
         "tooltip": false,
         "interval": 5
     },
     "memory": {
-        "format": "﬙  {used:0.1f} GB",
+        "format": " {used:0.1f} GB",
         "interval": 5
+    },
+    "disk": {
+        "format": " {}%",
     },
     "temperature": {
         // "thermal-zone": 2,
         "hwmon-path": "/sys/class/drm/card0/device/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         "format-critical": "🔥 {temperatureC}°C",
-        "format": "GPU {temperatureC}°C",
+        "format": " {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "backlight": {
@@ -104,15 +107,15 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         // "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-wifi": "{essid} ",
-        "format-ethernet": "Connected",
+        "format-wifi": "Connected ",
+        "format-ethernet": "Connected ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected",
+        "format-disconnected": "Disconnected ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "<big></big>  {volume}%",
+        "format": " {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -150,7 +153,10 @@
     "custom/bitcoin-price": {
         "interval": 10,
         "exec": "~/.config/waybar/modules/bitcoin_price.sh",
-        "format": "${}"
+        "format": " ${}"
+    },
+    "custom/separator": {
+        "format": "|"
     }
 }
 

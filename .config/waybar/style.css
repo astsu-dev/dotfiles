@@ -4,7 +4,7 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "JetBrainsMono Nerd Font", Helvetica, Arial, sans-serif;
+    font-family: "JetBrainsMono", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 14px;
 }
@@ -82,6 +82,7 @@ window#waybar.chromium {
 #language,
 #mpd,
 #custom-bitcoin-price,
+#custom-separator,
 #custom-gpu {
     padding: 0 10px;
     margin: 0 2px;
@@ -136,6 +137,11 @@ window#waybar.chromium {
 
 #custom-gpu {
     color: #50fa7b; 
+}
+
+#custom-separator {
+    margin: 0;
+    padding: 0;
 }
 
 #temperature {
