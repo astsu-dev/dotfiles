@@ -1,0 +1,20 @@
+# # Output configuration
+
+output * bg ~/wallpapers/wallpaper.png fill
+output $display1 pos 1920 0 res 1920x1080
+output $display2 pos 0 0 res 1920x1080
+    
+# # Input configuration
+
+input * {
+    xkb_layout "us,ru,ua"
+    xkb_options "grp:alt_shift_toggle"
+}
+
+input "COMPANY  USB Device  Keyboard" {
+    pointer_accel 0
+}
+
+input "COMPANY  USB Device" {
+    pointer_accel 0
+}

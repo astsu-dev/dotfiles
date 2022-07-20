@@ -1,0 +1,12 @@
+# # Autostart
+
+# Status Bar:
+bar {
+    swaybar_command waybar
+}
+
+# Notification daemon
+exec mako
+
+# Auth agent
+exec /usr/bin/polkit-dumb-agent
