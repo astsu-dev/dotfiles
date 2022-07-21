@@ -11,19 +11,11 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "catppuccin"
 lvim.transparent_window = true
-vim.g.tokyonight_style = "night"
--- vim.g.tokyonight_transparent_background = 1
--- vim.g.tokyonight_enable_italic = 0
--- vim.g.tokyonight_transparent = true
--- vim.g.tokyonight_style = "storm"
--- vim.g.tokyonight_transparent = true
--- vim.g.tokyonight_transparent_sidebar = true
--- vim.g.tokyonight_italic_keywords = false -- disable italic
--- vim.g.tokyonight_italic_comments = false -- disable italic
+vim.g.catppuccin_flavour = "macchiato"
+-- vim.g.tokyonight_style = "night"
 vim.opt.relativenumber = true
-
 
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -161,6 +153,7 @@ formatters.setup {
 -- Additional Plugins
 lvim.plugins = {
   { "ghifarit53/tokyonight-vim" },
+  { "catppuccin/nvim", as = "catppuccin" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
