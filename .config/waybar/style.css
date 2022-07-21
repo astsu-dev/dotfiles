@@ -1,71 +1,59 @@
+@define-color base #24273a;
+@define-color surface0 #363a4f;
+@define-color surface1 #494d64;
+@define-color overlay2 #939ab7;
+@define-color text #cad3f5;
+@define-color yellow #eed49f;
+@define-color peach #f5a97f;
+@define-color green #a6da95;
+@define-color mauve #c6a0f6;
+@define-color blue #8aadf4;
+@define-color red #ed8796;
+@define-color lavender #b7bdf8;
+@define-color sky #91d7e3;
+
 * {
     margin: 0;
     padding: 0;
     border: none;
     border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: "JetBrainsMono", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 14px;
 }
 
+window {
+  border-radius: 40px;
+}
+
 window#waybar {
-    background-color: rgba(40, 42, 54, 0.9);
-    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    transition-property: background-color;
-    transition-duration: .5s;
+    background-color: @surface0;
+    padding: 0 5px;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
+#workspaces {
+  border-radius: 15px;
+  padding: 0 5px;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #adb1b9;
-    /* Use box-shadow instead of border so the text isn't offset */
-    /* box-shadow: inset 0 -3px transparent; */
+    color: @overlay2;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    /* box-shadow: inset 0 -3px #ffffff; */
+    background-color: transparent;
+    box-shadow: none;
 }
 
 #workspaces button.focused {
-    background-color: #2c3038;
-    /* box-shadow: inset 0 -3px #ffffff; */
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
+    color: @text;
 }
 
 #mode {
     background-color: #64727D;
-    /* border-bottom: 3px solid #ffffff; */
 }
 
+#workspaces,
 #clock,
 #battery,
 #cpu,
@@ -83,15 +71,13 @@ window#waybar.chromium {
 #mpd,
 #custom-bitcoin-price,
 #custom-separator,
-#custom-gpu {
-    padding: 0 10px;
-    margin: 0 2px;
-    color: #adb1b9;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
+#custom-gpu,
+#custom-icon {
+    color: @text;
+    background-color: @surface1;
+    padding: 0 12px;
+    margin: 5px 4px;
+    border-radius: 40px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -104,39 +90,34 @@ window#waybar.chromium {
     margin-right: 0;
 }
 
-
 /* Modules */
-#clock {
-}
 
 #memory {
-    color: #ffb86c; 
+    color: @yellow; 
 }
 
 #cpu {
-    color: #bd93f9;
+    color: @mauve;
 }
 
 #network {
-    color: #50fa7b; 
+    color: @green; 
 }
 
 #network.disconnected {
-    color: #bf616a; 
+    color: @red; 
 }
 
-#pulseaudio {
-}
-
-#pulseaudio.muted {
+#clock {
+    color: @sky;
 }
 
 #custom-bitcoin-price {
-    color: #ffb86c; 
+    color: @peach; 
 }
 
 #custom-gpu {
-    color: #50fa7b; 
+    color: @green; 
 }
 
 #custom-separator {
@@ -144,62 +125,16 @@ window#waybar.chromium {
     padding: 0;
 }
 
+#custom-icon {
+  color: @yellow;
+}
+
 #temperature {
-    color: #5faeef;
+    color: @blue;
 }
 
 #temperature.critical {
-    color: #bf616a; 
-}
-/**/
-
-
-#battery {
-}
-
-#battery.charging, #battery.plugged {
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#disk {
-}
-
-#backlight {
-}
-
-
-
-#custom-media {
-}
-
-#custom-media.custom-spotify {
-}
-
-#custom-media.custom-vlc {
-}
-
-
-#tray {
+    color: @red; 
 }
 
 #tray > .passive {
@@ -209,34 +144,4 @@ label:focus {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
-}
-
-#idle_inhibitor {
-}
-
-#idle_inhibitor.activated {
-}
-
-#mpd {
-}
-
-#mpd.disconnected {
-}
-
-#mpd.stopped {
-}
-
-#mpd.paused {
-}
-
-#language {
-}
-
-#keyboard-state {
-}
-
-#keyboard-state > label {
-}
-
-#keyboard-state > label.locked {
 }
