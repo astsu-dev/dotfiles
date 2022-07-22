@@ -2,8 +2,7 @@
 
 ## Screenshots
 
-<img src="https://github.com/astsu-dev/dotfiles/raw/main/screenshots/desktop.png">
-<img src="https://github.com/astsu-dev/dotfiles/raw/main/screenshots/system_info.png">
+<img src="https://github.com/astsu-dev/dotfiles/raw/main/screenshots/catppuccin_macchiato.png">
 
 ## Details
 
@@ -13,15 +12,52 @@ WM (Window Manager) - [<img src="https://swaywm.org/logo.png" height="16px" alt=
 
 Bar - [Waybar](https://github.com/Alexays/Waybar)
 
-Terminal - [<img src="https://raw.githubusercontent.com/alacritty/alacritty/master/extra/logo/compat/alacritty-term%2Bscanlines.png" height="16px" alt="Alacritty"> Alacritty](https://github.com/alacritty/alacritty)
+Terminal - [<img src="https://sw.kovidgoyal.net/kitty/_static/kitty.svg" height="16px" alt="kitty"> kitty](https://github.com/kovidgoyal/kitty)
 
 Shell - [<img src="https://fishshell.com/docs/current/_static/fish.png" height="16px" alt="fish"> fish](https://github.com/fish-shell/fish-shell)
 
-Editor - [<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg" height="16px" alt="neovim"> neovim](https://github.com/neovim/neovim)
+Launcher - [wofi](https://hg.sr.ht/~scoopta/wofi)
 
-Notification daemon - [mako](https://github.com/emersion/mako)
+Editor - [<img src="https://user-images.githubusercontent.com/59826753/159940098-54284f26-f1da-4481-8b03-1deb34c57533.png" height="16px" alt="LunarVim"> LunarVim](https://github.com/LunarVim/LunarVim)
+
+Notification Daemon - [mako](https://github.com/emersion/mako)
+
+Color Scheme - [<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" height="16px"> Catppuccin Macchiato](https://github.com/catppuccin/catppuccin)
+
+Fetch - [nitch](https://github.com/unxsh/nitch)
+
+## Installation
+
+Clone repo:
+
+```shell
+git clone https://github.com/astsu-dev/dotfiles.git && cd dotfiles
+```
+
+Install dependencies:
+
+```shell
+sudo pacman -Sy sway waybar kitty mako wofi ttf-jetbrains-mono ttf-fira-mono otf-font-awesome
+```
+
+Copy configuration files:
+
+```shell
+cp -r .config/sway .config/waybar .config/kitty .config/mako .config/wofi .config
+```
+
+Wallpaper:
+
+```shell
+cp -r wallpapers ~/
+```
+
+Run:
+
+```shell
+exec sway
+```
 
 ## Thanks
 
-This setup was inspired by [siduck setup](https://github.com/siduck/dotfiles)
-
+I was inspired by [unixporn](https://www.reddit.com/r/unixporn) community. Thank you!)
