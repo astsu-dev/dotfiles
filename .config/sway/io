@@ -1,6 +1,6 @@
 # # Output configuration
 
-output * bg ~/wallpapers/wallpaper.png fill
+output * bg $wallpaper fill
 output $display1 pos 1920 0 res 1920x1080
 output $display2 pos 0 0 res 1920x1080
     

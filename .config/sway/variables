@@ -9,7 +9,7 @@ set $right l
 
 set $term kitty
 set $menu wofi
-set $wallpaper = ~/wallpapers/wallpaper.png
+set $wallpaper ~/wallpapers/wallpaper.png
 
 set $display1 DVI-D-1
 set $display2 HDMI-A-1
