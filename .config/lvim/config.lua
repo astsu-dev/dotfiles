@@ -154,6 +154,10 @@ formatters.setup {
 lvim.plugins = {
   { "ghifarit53/tokyonight-vim" },
   { "catppuccin/nvim", as = "catppuccin" },
+  {
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
