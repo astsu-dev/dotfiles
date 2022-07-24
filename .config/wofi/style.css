@@ -1,18 +1,23 @@
+@define-color base #24273a;
+@define-color lavender #b7bdf8;
+@define-color text #cad3f5;
+@define-color surface2 #5b6078;
+
 window {
     font-family: Fira Mono;
     font-weight: 500;
     font-size: 14px;
     margin: 5px;
-    background-color: #24273a;
-    color: #cad3f5;
-    border: 2px solid #b7bdf8;
+    background-color: @base;
+    color: @text;
+    border: 2px solid @lavender;
 }
 
 #input {
     padding: 10px;
     background: none;
     border: none;
-    color: #cad3f5;
+    color: @text;
 }
 
 #entry {
@@ -21,8 +26,8 @@ window {
 }
 
 #entry:selected {
-    border: 2px solid #b7bdf8;
-    background-color: #5b6078;
+    border: 2px solid @lavender;
+    background-color: @surface2;
 } 
 
 #text {
@@ -31,7 +36,7 @@ window {
 } 
 
 #text:selected {
-    color: #cad3f5;
+    color: @text;
     background: none;
 }
 

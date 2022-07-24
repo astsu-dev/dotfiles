@@ -1,7 +1,7 @@
-@define-color base #24273a;
-@define-color lavender #b7bdf8;
-@define-color text #cad3f5;
-@define-color surface2 #5b6078;
+@define-color base #eff1f5;
+@define-color lavender #7287fd;
+@define-color text #4c4f69;
+@define-color surface2 #acb0be;
 
 window {
     font-family: Fira Mono;
