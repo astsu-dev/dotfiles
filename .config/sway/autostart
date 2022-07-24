@@ -9,4 +9,4 @@ bar {
 exec mako
 
 # Auth agent
-exec /usr/bin/polkit-dumb-agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
