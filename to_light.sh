@@ -15,4 +15,4 @@ sed -i 's/vim.g.catppuccin_flavour \= "macchiato"/vim.g.catppuccin_flavour = "la
 # mako
 cp ~/.config/mako/latte ~/.config/mako/config && makoctl reload
 # wofi
-cp ~/.config/wofi/macchiato.css ~/.config/wofi/style.css
+cp ~/.config/wofi/latte.css ~/.config/wofi/style.css
