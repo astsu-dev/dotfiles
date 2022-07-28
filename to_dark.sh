@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Waybar
-cp ~/.config/waybar/themes/macchiato.css ~/.config/waybar/style.css
+sed -i 's/latte.css/macchiato.css/' ~/.config/waybar/style.css
 # Wallpaper
 cp ~/wallpapers/ghost-carrot-catppuccin-macchiato.png ~/wallpapers/wallpaper.png
 # Sway
@@ -11,8 +11,8 @@ sed -i 's/include themes\/latte.conf/include themes\/macchiato.conf/' ~/.config/
 # fish
 cp ~/.config/fish/mythemes/macchiato.fish ~/.config/fish/conf.d/theme.fish
 # LunarVim
-sed -i 's/vim.g.catppuccin_flavour \= "latte"/vim.g.catppuccin_flavour = "macchiato"/' ~/.config/lvim/config.lua
+sed -i 's/vim.g.catppuccin_flavour = "latte"/vim.g.catppuccin_flavour = "macchiato"/' ~/.config/lvim/config.lua
 # mako
 cp ~/.config/mako/macchiato ~/.config/mako/config && makoctl reload
 # wofi
-cp ~/.config/wofi/macchiato.css ~/.config/wofi/style.css
+cp ~/.config/wofi/themes/macchiato.css ~/.config/wofi/style.css

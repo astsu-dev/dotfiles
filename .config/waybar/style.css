@@ -1,16 +1,4 @@
-@define-color base #24273a;
-@define-color surface0 #363a4f;
-@define-color surface1 #494d64;
-@define-color overlay2 #939ab7;
-@define-color text #cad3f5;
-@define-color yellow #eed49f;
-@define-color peach #f5a97f;
-@define-color green #a6da95;
-@define-color mauve #c6a0f6;
-@define-color blue #8aadf4;
-@define-color red #ed8796;
-@define-color lavender #b7bdf8;
-@define-color sky #91d7e3;
+@import url("themes/macchiato.css");
 
 * {
     margin: 0;
@@ -20,6 +8,7 @@
     font-family: "JetBrainsMono", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 14px;
+    min-height: 0;
 }
 
 window {
@@ -74,7 +63,7 @@ window#waybar {
 #custom-icon {
     color: @text;
     background-color: @surface1;
-    padding: 0 12px;
+    padding: 2px 12px;
     margin: 5px 4px;
     border-radius: 40px;
 }
@@ -98,7 +87,7 @@ window#waybar {
 }
 
 #clock {
-    color: @sky;
+    color: @text;
 }
 
 #custom-bitcoin-price {
