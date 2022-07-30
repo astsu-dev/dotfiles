@@ -3,6 +3,7 @@
 ## Screenshots
 
 <img src="https://github.com/astsu-dev/dotfiles/raw/main/screenshots/catppuccin_macchiato.png">
+<img src="https://github.com/astsu-dev/dotfiles/raw/main/screenshots/catppuccin_latte_mod.png">
 
 ## Details
 
@@ -56,6 +57,20 @@ Run:
 
 ```shell
 exec sway
+```
+
+## Switch theme
+
+To dark:
+
+```shell
+./to_dark.sh
+```
+
+To light:
+
+```shell
+./to_light.sh
 ```
 
 ## Thanks
