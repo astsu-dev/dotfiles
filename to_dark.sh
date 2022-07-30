@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Waybar
-sed -i 's/latte.css/macchiato.css/' ~/.config/waybar/style.css
+sed -i 's/latte_mod.css/macchiato.css/' ~/.config/waybar/style.css
 # Wallpaper
 cp ~/wallpapers/ghost-carrot-catppuccin-macchiato.png ~/wallpapers/wallpaper.png
 # Sway
