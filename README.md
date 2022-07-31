@@ -38,7 +38,7 @@ git clone https://github.com/astsu-dev/dotfiles.git && cd dotfiles
 Install dependencies:
 
 ```shell
-sudo pacman -Sy sway waybar kitty mako wofi ttf-jetbrains-mono ttf-fira-mono otf-font-awesome
+sudo pacman -Sy sway waybar kitty mako wofi ttf-jetbrains-mono ttf-fira-mono ttf-nerd-fonts-symbols otf-font-awesome
 ```
 
 Copy configuration files:
