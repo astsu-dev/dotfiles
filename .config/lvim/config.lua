@@ -16,6 +16,7 @@ lvim.transparent_window = true
 vim.g.catppuccin_flavour = "macchiato"
 -- vim.g.tokyonight_style = "night"
 vim.opt.relativenumber = true
+vim.opt.wrap = true
 
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
