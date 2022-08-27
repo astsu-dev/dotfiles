@@ -16,3 +16,5 @@ sed -i 's/vim.g.catppuccin_flavour = "macchiato"/vim.g.catppuccin_flavour = "lat
 cp ~/.config/mako/latte ~/.config/mako/config && makoctl reload
 # wofi
 cp ~/.config/wofi/themes/latte.css ~/.config/wofi/style.css
+# bat
+sed -i 's/Catppuccin-macchiato/Catppuccin-latte/' ~/.config/bat/config
