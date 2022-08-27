@@ -12,4 +12,4 @@ set $menu wofi
 set $wallpaper ~/wallpapers/wallpaper.png
 
 set $display1 DVI-D-1
-set $display2 HDMI-A-1
+set $display2 DVI-D-1
