@@ -13,8 +13,7 @@ lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "catppuccin"
 lvim.transparent_window = true
-vim.g.catppuccin_flavour = "macchiato"
--- vim.g.tokyonight_style = "night"
+vim.g.catppuccin_flavour = "latte"
 vim.opt.relativenumber = true
 vim.opt.wrap = true
 
@@ -153,7 +152,6 @@ formatters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-  { "ghifarit53/tokyonight-vim" },
   { "catppuccin/nvim", as = "catppuccin" },
   {
     "iamcco/markdown-preview.nvim",
