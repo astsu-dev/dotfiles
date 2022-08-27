@@ -56,7 +56,7 @@
   },
   "cpu": {
     "format": " {usage}%",
-    "tooltip": false,
+    "tooltip": true,
     "interval": 5
   },
   "memory": {
@@ -73,7 +73,7 @@
     "format": " {temperatureC}°C",
   },
   "network": {
-    "format-wifi": "",
+    "format-wifi": "",
     "format-ethernet": "",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "",
@@ -88,6 +88,24 @@
     "format-source": "",
     "format-source-muted": "",
     "on-click": "pavucontrol"
+  },
+  "backlight": {
+    "format": " {percent}%",
+    "on-scroll-up": "light -A 1",
+    "on-scroll-down": "light -U 1"
+  },
+  "battery": {
+    "interval": 1,
+    "states": {
+      "100": 100,
+      "75": 75,
+      "50": 50,
+      "25": 25,
+      "critical": 5
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-icons": ["", "", "", "", ""]
   },
   "custom/gpu": {
     "interval": 1,
