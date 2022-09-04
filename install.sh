@@ -7,7 +7,7 @@ sudo pacman -S \
 	otf-font-awesome ttf-fira-mono ttf-jetbrains-mono ttf-nerd-fonts-symbols noto-fonts-emoji \
 	xdg-desktop-portal xdg-desktop-portal-wlr xdg-utils \
 	fish kitty btrfs-progs flatpak \
-	btop ranger thunar slurp grim bat \
+	btop ranger thunar tumbler slurp grim bat \
 	zip unzip openssh git mpv jq
 
 # mesa - video driver
@@ -27,6 +27,7 @@ sudo pacman -S \
 # btop - better htop
 # ranger - tui file manager
 # thunar - gui file manager
+# tumbler - thunar tumbnails
 # slurp grim - screenshots
 # bat - better cat
 # zip unzip - zip archive utils
