@@ -7,7 +7,9 @@ cp ~/wallpapers/ghost-carrot-catppuccin-macchiato.png ~/wallpapers/wallpaper.png
 # Sway
 sed -i 's/include themes\/latte/include themes\/macchiato/' ~/.config/sway/config && swaymsg reload
 # kitty
-sed -i 's/include themes\/latte.conf/include themes\/macchiato.conf/' ~/.config/kitty/kitty.conf && kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
+sed -i 's/include themes\/latte.conf/include themes\/macchiato.conf/' ~/.config/kitty/kitty.conf
+# Alacritty
+sed -i 's/colors: \*latte/colors: \*macchiato/' ~/.config/alacritty/themes/catppuccin.yml
 # fish
 cp ~/.config/fish/mythemes/macchiato.fish ~/.config/fish/conf.d/theme.fish
 # LunarVim
