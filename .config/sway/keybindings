@@ -9,6 +9,9 @@ bindsym --to-code $mod+Shift+q kill
 # Start your launcher
 bindsym --to-code $mod+y exec $menu
 
+# Start your powermenu
+bindsym --to-code $mod+p exec $powermenu
+
 # Drag floating windows by holding down $mod and left mouse button. For inverse behavior set `inverse`.
 floating_modifier $mod normal
 

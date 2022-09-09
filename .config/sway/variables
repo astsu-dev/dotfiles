@@ -7,9 +7,10 @@ set $down j
 set $up k
 set $right l
 
-set $term kitty
-set $menu wofi
+set $term alacritty
+set $menu ~/.config/scripts/launcher.sh
+set $powermenu ~/.config/scripts/powermenu.sh
 set $wallpaper ~/wallpapers/wallpaper.png
 
 set $display1 DVI-D-1
-set $display2 DVI-D-1
+set $display2 $display1
