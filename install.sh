@@ -3,11 +3,11 @@ sudo pacman -Sy \
 	pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol \
 	polkit polkit-gnome \
 	xorg-xwayland sway swaybg swaylock waybar rofi mako \
-	otf-font-awesome ttf-fira-mono ttf-jetbrains-mono ttf-nerd-fonts-symbols-2048-em noto-fonts-emoji \
+	otf-font-awesome ttf-fira-mono ttf-jetbrains-mono ttf-nerd-fonts-symbols-2048-em-mono noto-fonts-emoji \
 	xdg-desktop-portal xdg-desktop-portal-wlr xdg-utils \
 	fish alacritty btrfs-progs flatpak \
 	btop ranger thunar tumbler slurp grim bat \
-	zip unzip openssh git mpv jq feh inetutils
+	zip unzip openssh git mpv jq feh inetutils wl-clipboard
 
 # mesa - video driver
 # libva-mesa-driver mesa-vdpau - hardware acceleration
@@ -36,6 +36,7 @@ sudo pacman -Sy \
 # jq - json processor
 # feh - image viewer
 # inetutils - network utilities (hostname, telnet, ftp, etc.)
+# wl-clipboard - system clipboard manage
 
 flatpak install flathub org.mozilla.firefox com.github.Eloston.UngoogledChromium org.telegram.desktop com.github.tchx84.Flatseal
 
