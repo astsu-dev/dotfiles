@@ -1,8 +1,10 @@
+#!/bin/bash
+
 sudo pacman -Sy \
 	mesa libva-mesa-driver mesa-vdpau \
 	pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol \
 	polkit polkit-gnome \
-	xorg-xwayland sway swaybg swaylock waybar rofi mako \
+	xorg-xwayland sway swaybg swaylock waybar mako \
 	otf-font-awesome ttf-fira-mono ttf-jetbrains-mono ttf-nerd-fonts-symbols-2048-em-mono noto-fonts-emoji \
 	xdg-desktop-portal xdg-desktop-portal-wlr xdg-utils \
 	fish alacritty btrfs-progs flatpak \
@@ -16,7 +18,6 @@ sudo pacman -Sy \
 # polkit polkit-gnome - policy agent, policy agent gui
 # sway swaybg swaylock - wm packages
 # waybar - bar
-# rofi - launcher
 # mako - notifications daemon
 # otf-font-awesome ttf-fira-mono ttf-jetbrains-mono ttf-nerd-fonts-symbols, noto-fonts-emoji - fonts
 # fish - shell
@@ -36,10 +37,17 @@ sudo pacman -Sy \
 # jq - json processor
 # feh - image viewer
 # inetutils - network utilities (hostname, telnet, ftp, etc.)
-# wl-clipboard - system clipboard manage
+# wl-clipboard - system clipboard tools
 
 flatpak install flathub org.mozilla.firefox com.github.Eloston.UngoogledChromium org.telegram.desktop com.github.tchx84.Flatseal
+# flatseal  - manage flatpak permissions
+
+# Install yay - aur helper
+git clone https://aur.archlinux.org/yay.git yay && cd yay && makepkg -si
+
+# rofi - launcher
+yay -S rofi-lbonn-wayland
 
 # Copy config files
 cp -r .config ~/.config
-cp -r wallpapers ~/wallpapers
+cp -r wallpapers ~
