@@ -122,6 +122,6 @@
   },
   "custom/icon": {
     "format": "",
-    "on-click": "wofi"
+    "on-click": "~/.config/scripts/powermenu.sh"
   }
 }
