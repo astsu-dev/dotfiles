@@ -64,7 +64,8 @@ window#waybar {
 #custom-bitcoin-price,
 #custom-separator,
 #custom-gpu,
-#custom-icon {
+#custom-icon,
+#custom-powerbutton {
     color: @text;
     background-color: @surface1;
     padding: 2px 12px;
@@ -109,6 +110,11 @@ window#waybar {
 
 #custom-icon {
   color: @yellow;
+}
+
+#custom-powerbutton {
+  color: @red;
+  font-size: 13px;
 }
 
 #temperature {

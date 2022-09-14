@@ -18,7 +18,8 @@
     "memory",
     "disk",
     "sway/language",
-    "tray"
+    "tray",
+    "custom/powerbutton"
   ],
   "wlr/workspaces": {
     "format": "{name}"
@@ -122,6 +123,10 @@
   },
   "custom/icon": {
     "format": "",
+    "on-click": "~/.config/scripts/launcher.sh"
+  },
+  "custom/powerbutton": {
+    "format": "",
     "on-click": "~/.config/scripts/powermenu.sh"
   }
 }
