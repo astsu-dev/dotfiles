@@ -1,4 +1,5 @@
 #!/bin/bash
+# Base settings for pc and laptop
 
 sudo pacman -Sy \
 	mesa libva-mesa-driver mesa-vdpau \
@@ -10,7 +11,6 @@ sudo pacman -Sy \
 	fish alacritty btrfs-progs flatpak \
 	btop ranger thunar tumbler slurp grim bat \
 	zip unzip openssh git mpv jq feh inetutils wl-clipboard
-
 # mesa - video driver
 # libva-mesa-driver mesa-vdpau - hardware acceleration
 # pipewire pipewire-alsa pipewire-pulse pipewire-jack - audio
@@ -47,7 +47,3 @@ git clone https://aur.archlinux.org/yay.git yay && cd yay && makepkg -si
 
 # rofi - launcher
 yay -S rofi-lbonn-wayland
-
-# Copy config files
-cp -r .config ~/.config
-cp -r wallpapers ~
