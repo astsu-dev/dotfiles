@@ -19,10 +19,6 @@ window#waybar {
     background-color: @surface0;
 }
 
-#workspaces {
-  border-radius: 15px;
-}
-
 #workspaces button {
     color: @overlay2;
     margin-right: 8px;
@@ -95,6 +91,27 @@ window#waybar {
     color: @text;
 }
 
+#temperature {
+    color: @blue;
+}
+
+#temperature.critical {
+    color: @red; 
+}
+
+#language {
+  min-width: 16px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
 #custom-bitcoin-price {
     color: @peach; 
 }
@@ -115,25 +132,4 @@ window#waybar {
 #custom-powerbutton {
   color: @red;
   font-size: 13px;
-}
-
-#temperature {
-    color: @blue;
-}
-
-#temperature.critical {
-    color: @red; 
-}
-
-#language {
-  min-width: 16px;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
 }

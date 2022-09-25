@@ -106,7 +106,13 @@
     },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "custom/gpu": {
     "interval": 1,
@@ -123,10 +129,12 @@
   },
   "custom/icon": {
     "format": "",
-    "on-click": "~/.config/scripts/launcher.sh"
+    "on-click": "~/.config/scripts/launcher.sh",
+    "tooltip": false
   },
   "custom/powerbutton": {
     "format": "",
-    "on-click": "~/.config/scripts/powermenu.sh"
+    "on-click": "~/.config/scripts/powermenu.sh",
+    "tooltip": false
   }
 }
