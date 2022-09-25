@@ -1,0 +1,21 @@
+{
+  "modules-left": [
+    "custom/icon",
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "custom/bitcoin-price",
+    "pulseaudio",
+    "backlight",
+    "network",
+    "cpu",
+    "memory",
+    "battery",
+    "sway/language",
+    "tray",
+    "custom/powerbutton"
+  ]
+}
