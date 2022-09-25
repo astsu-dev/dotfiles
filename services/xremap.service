@@ -1,0 +1,9 @@
+[Unit]
+Description=xremap daemon
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/xremap /home/astsu/.config/xremap/config.yml
+
+[Install]
+WantedBy=multi-user.target

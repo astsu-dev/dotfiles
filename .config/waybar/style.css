@@ -99,6 +99,10 @@ window#waybar {
     color: @red; 
 }
 
+#battery.critical {
+  animation: battery-low 3s infinite;
+}
+
 #language {
   min-width: 16px;
 }
@@ -132,4 +136,19 @@ window#waybar {
 #custom-powerbutton {
   color: @red;
   font-size: 13px;
+}
+
+@keyframes battery-low {
+  0% {
+    background: @red;
+    color: @base;
+  } 
+  50% {
+    background: @surface1;
+    color: @text;
+  }
+  100% {
+    background: @red;
+    color: @base;
+  }
 }

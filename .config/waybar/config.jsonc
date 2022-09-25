@@ -1,26 +1,7 @@
 {
   //"height": 0, // Waybar height (to be removed for auto height)
-  "width": 1900,
-  "modules-left": [
-    "custom/icon",
-    "sway/workspaces"
-  ],
-  "modules-center": [
-    "clock"
-  ],
-  "modules-right": [
-    "custom/bitcoin-price",
-    "pulseaudio",
-    "network",
-    "cpu",
-    "custom/gpu",
-    "temperature",
-    "memory",
-    "disk",
-    "sway/language",
-    "tray",
-    "custom/powerbutton"
-  ],
+  // "width": 1900,
+  "margin": "0 5 0 5",
   "wlr/workspaces": {
     "format": "{name}"
   },
@@ -102,7 +83,7 @@
       "75": 75,
       "50": 50,
       "25": 25,
-      "critical": 5
+      "critical": 10
     },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
@@ -136,5 +117,8 @@
     "format": "",
     "on-click": "~/.config/scripts/powermenu.sh",
     "tooltip": false
-  }
+  },
+  "include": [
+    "~/.config/waybar/laptop_layout.jsonc"
+  ]
 }
