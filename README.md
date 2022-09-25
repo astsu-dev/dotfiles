@@ -13,11 +13,11 @@ WM (Window Manager) - [<img src="https://swaywm.org/logo.png" height="16px" alt=
 
 Bar - [Waybar](https://github.com/Alexays/Waybar)
 
-Terminal - [<img src="https://sw.kovidgoyal.net/kitty/_static/kitty.svg" height="16px" alt="kitty"> kitty](https://github.com/kovidgoyal/kitty)
+Terminal - [<img src="https://raw.githubusercontent.com/alacritty/alacritty/master/extra/logo/compat/alacritty-term%2Bscanlines.png" height="16px" alt="alacritty"> Alacritty](https://github.com/alacritty/alacritty)
 
 Shell - [<img src="https://fishshell.com/docs/current/_static/fish.png" height="16px" alt="fish"> fish](https://github.com/fish-shell/fish-shell)
 
-Launcher - [wofi](https://hg.sr.ht/~scoopta/wofi)
+Launcher - [Rofi (lbonn wayland fork)](https://github.com/lbonn/rofi)
 
 Editor - [<img src="https://user-images.githubusercontent.com/59826753/159940098-54284f26-f1da-4481-8b03-1deb34c57533.png" height="16px" alt="LunarVim"> LunarVim](https://github.com/LunarVim/LunarVim)
 
@@ -35,28 +35,14 @@ Clone repo:
 git clone https://github.com/astsu-dev/dotfiles.git && cd dotfiles
 ```
 
-Install dependencies:
+Install (**warning**: it installs many additional dependencies for my needs):
 
 ```shell
-sudo pacman -Sy sway waybar kitty mako wofi ttf-jetbrains-mono ttf-fira-mono ttf-nerd-fonts-symbols otf-font-awesome
+chmod +x ./install/*
 ```
 
-Copy configuration files:
-
 ```shell
-cp -r .config/sway .config/waybar .config/kitty .config/mako .config/wofi .config
-```
-
-Wallpaper:
-
-```shell
-cp -r wallpapers ~/
-```
-
-Run:
-
-```shell
-exec sway
+./install/install.sh
 ```
 
 ## Switch theme
