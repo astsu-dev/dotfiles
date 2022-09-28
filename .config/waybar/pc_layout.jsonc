@@ -19,4 +19,5 @@
     "tray",
     "custom/powerbutton"
   ],
+  "margin": "0 10 0 10"
 }

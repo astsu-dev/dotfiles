@@ -17,5 +17,6 @@
     "sway/language",
     "tray",
     "custom/powerbutton"
-  ]
+  ],
+  "margin": "0 5 0 5"
 }
