@@ -1,14 +1,14 @@
 @import url("themes/macchiato.css");
 
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    font-family: "JetBrainsMono", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  min-height: 0;
 }
 
 window {
@@ -16,12 +16,12 @@ window {
 }
 
 window#waybar {
-    background-color: @surface0;
+  background-color: @surface0;
 }
 
 #workspaces button {
-    color: @overlay2;
-    margin-right: 8px;
+  color: @overlay2;
+  margin-right: 8px;
 }
 
 #workspaces button:last-child {
@@ -29,16 +29,16 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background-color: transparent;
-    box-shadow: none;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 #workspaces button.focused {
-    color: @text;
+  color: @text;
 }
 
 #mode {
-    background-color: #64727D;
+  background-color: #64727d;
 }
 
 #workspaces,
@@ -61,42 +61,43 @@ window#waybar {
 #custom-separator,
 #custom-gpu,
 #custom-icon,
+#custom-break,
 #custom-powerbutton {
-    color: @text;
-    background-color: @surface1;
-    padding: 2px 12px;
-    margin: 5px 4px;
-    border-radius: 40px;
+  color: @text;
+  background-color: @surface1;
+  padding: 2px 12px;
+  margin: 5px 4px;
+  border-radius: 40px;
 }
 
 /* Modules */
 
 #memory {
-    color: @yellow; 
+  color: @yellow;
 }
 
 #cpu {
-    color: @mauve;
+  color: @mauve;
 }
 
 #network {
-    color: @green; 
+  color: @green;
 }
 
 #network.disconnected {
-    color: @red; 
+  color: @red;
 }
 
 #clock {
-    color: @text;
+  color: @text;
 }
 
 #temperature {
-    color: @blue;
+  color: @blue;
 }
 
 #temperature.critical {
-    color: @red; 
+  color: @red;
 }
 
 #battery.critical {
@@ -108,25 +109,25 @@ window#waybar {
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
 }
 
 #custom-bitcoin-price {
-    color: @peach; 
+  color: @peach;
 }
 
 #custom-gpu {
-    color: @green; 
+  color: @green;
 }
 
 #custom-separator {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #custom-icon {
@@ -138,11 +139,15 @@ window#waybar {
   font-size: 13px;
 }
 
+#custom-break.enabled {
+  color: @yellow;
+}
+
 @keyframes battery-low {
   0% {
     background: @red;
     color: @base;
-  } 
+  }
   50% {
     background: @surface1;
     color: @text;

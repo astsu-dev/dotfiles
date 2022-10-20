@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Waybar
-sed -i 's/macchiato.css/latte_mod.css/' ~/.config/waybar/style.css
+sed -i 's/macchiato.css/latte.css/' ~/.config/waybar/style.css
 
 # Wallpaper
 cp ~/wallpapers/ghost-carrot-catppuccin-latte.png ~/wallpapers/wallpaper.png

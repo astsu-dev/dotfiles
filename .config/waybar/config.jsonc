@@ -1,6 +1,4 @@
 {
-  //"height": 0, // Waybar height (to be removed for auto height)
-  // "width": 1900,
   "wlr/workspaces": {
     "format": "{name}"
   },
@@ -45,13 +43,13 @@
     "interval": 5
   },
   "disk": {
-    "format": " {free}",
+    "format": " {free}"
   },
   "temperature": {
-    "hwmon-path": "/sys/class/drm/card0/device/hwmon/hwmon2/temp1_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
     "critical-threshold": 75,
     "format-critical": " {temperatureC}°C",
-    "format": " {temperatureC}°C",
+    "format": " {temperatureC}°C"
   },
   "network": {
     "format-wifi": "",
@@ -61,7 +59,6 @@
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
     "format": " {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
@@ -86,13 +83,13 @@
     },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", "", "", ""]
+  },
+  "custom/gpu-temperature": {
+    "hwmon-path": "/sys/class/drm/card0/device/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 75,
+    "format-critical": " {temperatureC}°C",
+    "format": " {temperatureC}°C"
   },
   "custom/gpu": {
     "interval": 1,
@@ -117,7 +114,14 @@
     "on-click": "~/.config/scripts/powermenu.sh",
     "tooltip": false
   },
-  "include": [
-    "~/.config/waybar/pc_layout.jsonc"
-  ]
+  "custom/break": {
+    "format": " {}",
+    "interval": 1,
+    "exec": "~/.config/waybar/modules/break.py tick 45",
+    "on-click": "~/.config/waybar/modules/break.py toggle",
+    "on-click-right": "~/.config/waybar/modules/break.py reset 45",
+    "tooltip": true,
+    "return-type": "json"
+  },
+  "include": ["~/.config/waybar/laptop_layout.jsonc"]
 }

@@ -1,22 +1,19 @@
 {
-  "modules-left": [
-    "custom/icon",
-    "sway/workspaces"
-  ],
-  "modules-center": [
-    "clock"
-  ],
+  "modules-left": ["custom/icon", "sway/workspaces"],
+  "modules-center": ["clock"],
   "modules-right": [
     "custom/bitcoin-price",
+    "custom/break",
     "pulseaudio",
     "backlight",
     "network",
     "cpu",
+    "temperature",
     "memory",
     "battery",
     "sway/language",
     "tray",
     "custom/powerbutton"
   ],
-  "margin": "0 5 0 5"
+  "margin": "0 10 0 10"
 }
