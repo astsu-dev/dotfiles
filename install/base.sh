@@ -8,9 +8,9 @@ sudo pacman -Sy \
 	xorg-xwayland sway swaybg swaylock waybar mako \
 	otf-font-awesome ttf-fira-mono ttf-jetbrains-mono ttf-nerd-fonts-symbols-2048-em-mono noto-fonts-emoji \
 	xdg-desktop-portal xdg-desktop-portal-wlr xdg-utils \
-	fish alacritty btrfs-progs flatpak \
+	fish alacritty btrfs-progs \
 	btop ranger thunar tumbler slurp grim bat \
-	zip unzip openssh git mpv jq feh inetutils wl-clipboard
+	zip unzip openssh git mpv jq feh inetutils wl-clipboard firefox telegram-desktop
 # mesa - video driver
 # libva-mesa-driver mesa-vdpau - hardware acceleration
 # pipewire pipewire-alsa pipewire-pulse pipewire-jack - audio
@@ -38,12 +38,16 @@ sudo pacman -Sy \
 # feh - image viewer
 # inetutils - network utilities (hostname, telnet, ftp, etc.)
 # wl-clipboard - system clipboard tools
+# firefox - browser
+# telegram-desktop - telegram
 
-flatpak install flathub org.mozilla.firefox com.github.Eloston.UngoogledChromium org.telegram.desktop com.github.tchx84.Flatseal
+# flatpak install flathub org.mozilla.firefox com.github.Eloston.UngoogledChromium org.telegram.desktop com.github.tchx84.Flatseal
 # flatseal  - manage flatpak permissions
 
 # Install yay - aur helper
 git clone https://aur.archlinux.org/yay.git yay && cd yay && makepkg -si
 
 # rofi - launcher
-yay -S rofi-lbonn-wayland
+yay -S rofi-lbonn-wayland ungoogled-chromium-bin
+# rofi-lbonn-wayland - rofi app runner wayland version
+# ungoogled-chromium-bin - chromium without google services

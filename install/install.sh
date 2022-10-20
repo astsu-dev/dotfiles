@@ -4,5 +4,5 @@
 ./laptop.sh
 
 # # Copy config files
-cp -r .config ~/.config
-cp -r wallpapers ~
+cp -r ../.config ~/.config
+cp -r ../wallpapers ~
