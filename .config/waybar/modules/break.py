@@ -13,7 +13,8 @@ class State(TypedDict):
     enabled: bool
 
 
-DEFAULT_STATE: State = {"time_left": 45 * 60, "enabled": False}
+def create_default_state() -> State:
+    return {"time_left": 45 * 60, "enabled": False}
 
 
 def push_notification() -> None:
@@ -28,7 +29,7 @@ def get_state() -> State:
         with open(STATE_FILE_PATH, encoding="utf-8") as file:
             return json.load(file)
     except FileNotFoundError:
-        return update_state(DEFAULT_STATE)
+        return update_state(create_default_state())
 
 
 def update_state(state: State) -> State:
@@ -93,14 +94,14 @@ if __name__ == "__main__":
     subparsers = parser.add_subparsers()
 
     parser_tick = subparsers.add_parser("tick")
-    parser_tick.add_argument("duration", type=int)
+    parser_tick.add_argument("duration", type=int, help="Time in seconds")
     parser_tick.set_defaults(func=run_tick_command)
 
     parser_toggle = subparsers.add_parser("toggle")
     parser_toggle.set_defaults(func=run_toggle_command)
 
     parser_reset = subparsers.add_parser("reset")
-    parser_reset.add_argument("duration", type=int)
+    parser_reset.add_argument("duration", type=int, help="Time in seconds")
     parser_reset.set_defaults(func=run_reset_command)
 
     args = parser.parse_args()
