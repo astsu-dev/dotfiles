@@ -12,5 +12,5 @@ set $menu ~/.config/scripts/launcher.sh
 set $powermenu ~/.config/scripts/powermenu.sh
 set $wallpaper ~/wallpapers/wallpaper.png
 
-set $display1 DVI-D-1
+set $display1 eDP-1
 set $display2 $display1

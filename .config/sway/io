@@ -24,5 +24,5 @@ input "type:touchpad" {
     natural_scroll enabled
     dwt true
     accel_profile flat
-    pointer_accel 0.5
+    pointer_accel 0
 }
