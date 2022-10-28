@@ -132,11 +132,13 @@ window#waybar {
 
 #custom-icon {
   color: @yellow;
+  margin-left: 5px; /* Waybar padding */
 }
 
 #custom-powerbutton {
   color: @red;
   font-size: 13px;
+  margin-right: 5px; /* Waybar padding */
 }
 
 #custom-break.enabled {
