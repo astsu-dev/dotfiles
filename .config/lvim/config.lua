@@ -5,6 +5,9 @@ lvim.colorscheme = "catppuccin-macchiato"
 lvim.transparent_window = true
 vim.opt.relativenumber = true
 vim.opt.wrap = true
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
