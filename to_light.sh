@@ -19,7 +19,7 @@ sed -i 's/colors: \*macchiato/colors: \*latte/' ~/.config/alacritty/themes/catpp
 cp ~/.config/fish/mythemes/latte.fish ~/.config/fish/conf.d/theme.fish
 
 # LunarVim
-sed -i 's/vim.g.catppuccin_flavour = "macchiato"/vim.g.catppuccin_flavour = "latte"/' ~/.config/lvim/config.lua
+sed -i 's/catppuccin-macchiato/catppuccin-latte/' ~/.config/lvim/config.lua
 
 # mako
 cp ~/.config/mako/latte ~/.config/mako/config && makoctl reload
