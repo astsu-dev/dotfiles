@@ -10,7 +10,8 @@ sudo pacman -Sy \
 	xdg-desktop-portal xdg-desktop-portal-wlr xdg-utils \
 	fish alacritty btrfs-progs \
 	btop ranger thunar tumbler slurp grim bat \
-	zip unzip openssh git mpv jq feh inetutils wl-clipboard firefox chromium telegram-desktop
+	zip unzip openssh git mpv jq feh inetutils wl-clipboard firefox chromium telegram-desktop \
+  cmus
 # mesa - video driver
 # libva-mesa-driver mesa-vdpau - hardware acceleration
 # pipewire pipewire-alsa pipewire-pulse pipewire-jack - audio
@@ -38,9 +39,9 @@ sudo pacman -Sy \
 # feh - image viewer
 # inetutils - network utilities (hostname, telnet, ftp, etc.)
 # wl-clipboard - system clipboard tools
-# firefox - browser
-# chromium - browser
+# firefox chromium - browsers
 # telegram-desktop - telegram
+# cmus - tui music player
 
 # flatpak install flathub org.mozilla.firefox com.github.Eloston.UngoogledChromium org.telegram.desktop com.github.tchx84.Flatseal
 # flatseal  - manage flatpak permissions
