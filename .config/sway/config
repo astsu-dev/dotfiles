@@ -2,5 +2,6 @@ include /etc/sway/config.d/*
 include variables
 include themes/macchiato
 include keybindings
+include windows
 include io
 include autostart
