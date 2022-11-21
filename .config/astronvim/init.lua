@@ -4,7 +4,8 @@ local config = {
     n = {
       ["<Tab>"] = { "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
       ["<S-Tab>"] = { "<cmd>BufferLineCyclePrev<cr>", desc = "Prev buffer" },
-    }
+      ["<C-Bslash>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle term" },
+    },
   },
   plugins = {
     init = {
