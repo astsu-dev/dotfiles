@@ -18,8 +18,11 @@ sed -i 's/colors: \*latte/colors: \*macchiato/' ~/.config/alacritty/themes/catpp
 # fish
 cp ~/.config/fish/mythemes/macchiato.fish ~/.config/fish/conf.d/theme.fish
 
-# LunarVim
-sed -i 's/catppuccin-latte/catppuccin-macchiato/' ~/.config/lvim/config.lua
+# # LunarVim
+# sed -i 's/catppuccin-latte/catppuccin-macchiato/' ~/.config/lvim/config.lua
+
+# AstroNvim
+sed -i 's/catppuccin-latte/catppuccin-macchiato/' ~/.config/nvim/lua/user/init.lua
 
 # mako
 cp ~/.config/mako/macchiato ~/.config/mako/config && makoctl reload
