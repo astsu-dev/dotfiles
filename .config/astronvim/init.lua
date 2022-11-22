@@ -17,6 +17,11 @@ local config = {
         end,
       },
     },
+    treesitter = {
+      rainbow = {
+        enable = false
+      }
+    }
   },
 }
 
