@@ -35,3 +35,6 @@ sed -i 's/macchiato/latte/' ~/.config/rofi/launcher/config.rasi && sed -i 's/mac
 
 # bat
 sed -i 's/Catppuccin-macchiato/Catppuccin-latte/' ~/.config/bat/config
+
+# Zathura
+sed -i 's/catppuccin-macchiato/catppuccin-latte/' ~/.config/zathura/zathurarc
