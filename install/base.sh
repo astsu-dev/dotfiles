@@ -1,17 +1,18 @@
 #!/bin/bash
 # Base settings for pc and laptop
 
+# Install packages
 sudo pacman -Sy \
 	mesa libva-mesa-driver mesa-vdpau \
 	pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol \
 	polkit polkit-gnome \
-	xorg-xwayland sway swaybg swaylock waybar mako \
+	xorg-xwayland sway swaybg swaylock waybar mako rofi \
 	otf-font-awesome ttf-fira-mono ttf-fira-sans ttf-jetbrains-mono ttf-nerd-fonts-symbols-2048-em-mono noto-fonts-emoji \
 	xdg-desktop-portal xdg-desktop-portal-wlr xdg-utils \
 	fish alacritty btrfs-progs \
 	btop ranger thunar tumbler slurp grim bat \
 	zip unzip openssh git mpv jq feh inetutils wl-clipboard firefox chromium telegram-desktop \
-  cmus
+  cmus zathura zathura-pdf-poppler
 # mesa - video driver
 # libva-mesa-driver mesa-vdpau - hardware acceleration
 # pipewire pipewire-alsa pipewire-pulse pipewire-jack - audio
@@ -20,6 +21,7 @@ sudo pacman -Sy \
 # sway swaybg swaylock - wm packages
 # waybar - bar
 # mako - notifications daemon
+# rofi - app launcher
 # otf-font-awesome ttf-fira-mono ttf-fira-sans ttf-jetbrains-mono ttf-nerd-fonts-symbols, noto-fonts-emoji - fonts
 # fish - shell
 # alacritty - terminal
@@ -42,6 +44,7 @@ sudo pacman -Sy \
 # firefox chromium - browsers
 # telegram-desktop - telegram
 # cmus - tui music player
+# zathura zathura-pdf-poppler - pdf viewer
 
 # flatpak install flathub org.mozilla.firefox com.github.Eloston.UngoogledChromium org.telegram.desktop com.github.tchx84.Flatseal
 # flatseal  - manage flatpak permissions
@@ -49,7 +52,12 @@ sudo pacman -Sy \
 # Install yay - aur helper
 git clone https://aur.archlinux.org/yay.git yay && cd yay && makepkg -si
 
-# rofi - launcher
-yay -S rofi-lbonn-wayland
+# yay -S rofi-lbonn-wayland
 # rofi-lbonn-wayland - rofi app runner wayland version
-# ungoogled-chromium-bin - chromium without google services
+
+# Config
+
+## Mime types
+xdg-mime default org.pwmt.zathura.desktop application/pdf
+xdg-mime default feh.desktop image/png
+xdg-mime default feh.desktop image/jpeg
