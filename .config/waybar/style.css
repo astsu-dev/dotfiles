@@ -104,6 +104,10 @@ window#waybar {
   animation: battery-low 3s infinite;
 }
 
+#battery.charging {
+  color: @rosewater;
+}
+
 #language {
   min-width: 16px;
 }

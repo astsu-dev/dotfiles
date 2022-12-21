@@ -82,8 +82,14 @@
       "critical": 10
     },
     "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-icons": ["", "", "", "", ""]
+    "format-charging": " {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "custom/gpu-temperature": {
     "hwmon-path": "/sys/class/drm/card0/device/hwmon/hwmon2/temp1_input",
@@ -123,5 +129,7 @@
     "tooltip": true,
     "return-type": "json"
   },
-  "include": ["~/.config/waybar/laptop_layout.jsonc"]
+  "include": [
+    "~/.config/waybar/laptop_layout.jsonc"
+  ]
 }
