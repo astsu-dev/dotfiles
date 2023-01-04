@@ -1,5 +1,10 @@
 local config = {
   colorscheme = "catppuccin-macchiato",
+  options = {
+    opt = {
+      wrap = true
+    },
+  },
   mappings = {
     n = {
       ["<Tab>"] = { "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
