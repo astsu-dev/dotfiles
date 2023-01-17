@@ -1,6 +1,11 @@
 {
-  "modules-left": ["custom/icon", "sway/workspaces"],
-  "modules-center": ["clock"],
+  "modules-left": [
+    "custom/icon",
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "custom/bitcoin-price",
     "custom/break",
