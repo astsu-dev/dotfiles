@@ -12,6 +12,13 @@ local config = {
       ["<C-Bslash>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle term" },
     },
   },
+  lsp = {
+    formatting = {
+      disabled = {
+        "tsserver",
+      },
+    },
+  },
   plugins = {
     init = {
       {
@@ -21,6 +28,17 @@ local config = {
           require("catppuccin").setup { transparent_background = true }
         end,
       },
+      {
+        "ray-x/lsp_signature.nvim",
+        event = "BufRead",
+        config = function()
+          require("lsp_signature").setup()
+        end,
+      },
+      {
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+      }
     },
     treesitter = {
       rainbow = {
