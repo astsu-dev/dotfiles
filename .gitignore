@@ -1,1 +1,11 @@
+# mpv
 .config/mpv/watch_later/
+
+# fish
+.config/fish/*
+!.config/fish/mythemes/
+!.config/fish/config.fish
+
+# cmus
+.config/cmus/*
+!.config/cmus/*.theme
