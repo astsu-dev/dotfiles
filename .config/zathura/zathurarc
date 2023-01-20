@@ -1,2 +1,4 @@
-include catppuccin-macchiato
+include themes/rose-pine-dawn
+set recolor true
+set recolor-keephue true
 set selection-clipboard clipboard

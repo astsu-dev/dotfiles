@@ -1,4 +1,4 @@
-@import url("themes/macchiato.css");
+@import url("themes/rose-pine-dawn.css");
 
 * {
   margin: 0;
@@ -16,11 +16,11 @@ window {
 }
 
 window#waybar {
-  background-color: @surface0;
+  background-color: @color-bar-background;
 }
 
 #workspaces button {
-  color: @overlay2;
+  color: @color-workspace-inactive-foreground;
   margin-right: 8px;
 }
 
@@ -34,11 +34,7 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  color: @text;
-}
-
-#mode {
-  background-color: #64727d;
+  color: @color-workspace-active-foreground;
 }
 
 #workspaces,
@@ -63,8 +59,7 @@ window#waybar {
 #custom-icon,
 #custom-break,
 #custom-powerbutton {
-  color: @text;
-  background-color: @surface1;
+  background: @color-tile-background;
   padding: 2px 12px;
   margin: 5px 4px;
   border-radius: 40px;
@@ -72,32 +67,48 @@ window#waybar {
 
 /* Modules */
 
+#clock {
+  color: @color-clock-foreground;
+}
+
+#pulseaudio {
+  color: @color-volume-foreground;
+}
+
+#backlight {
+  color: @color-brightness-foreground;
+}
+
 #memory {
-  color: @yellow;
+  color: @color-ram-foreground;
 }
 
 #cpu {
-  color: @mauve;
+  color: @color-cpu-foreground;
 }
 
 #network {
-  color: @green;
+  color: @color-network-connected-foreground;
 }
 
 #network.disconnected {
-  color: @red;
+  color: @color-network-disconnected-foreground;
 }
 
 #clock {
-  color: @text;
+  color: @color-clock-foreground;
 }
 
 #temperature {
-  color: @blue;
+  color: @color-cpu-temperature-normal-foreground;
 }
 
 #temperature.critical {
-  color: @red;
+  color: @color-cpu-temperature-critical-foreground;
+}
+
+#battery {
+  color: @color-battery-foreground;
 }
 
 #battery.critical {
@@ -105,10 +116,11 @@ window#waybar {
 }
 
 #battery.charging {
-  color: @rosewater;
+  color: @color-battery-charging-foreground;
 }
 
 #language {
+  color: @color-language-foreground;
   min-width: 16px;
 }
 
@@ -122,11 +134,7 @@ window#waybar {
 }
 
 #custom-bitcoin-price {
-  color: @peach;
-}
-
-#custom-gpu {
-  color: @green;
+  color: @color-bitcoin-foreground;
 }
 
 #custom-separator {
@@ -135,31 +143,35 @@ window#waybar {
 }
 
 #custom-icon {
-  color: @yellow;
+  color: @color-launcher-foreground;
   margin-left: 5px; /* Waybar padding */
 }
 
 #custom-powerbutton {
-  color: @red;
+  color: @color-power-button-foreground;
   font-size: 13px;
   margin-right: 5px; /* Waybar padding */
 }
 
+#custom-break {
+  color: @color-break-inactive-foreground;
+}
+
 #custom-break.enabled {
-  color: @yellow;
+  color: @color-break-active-foreground;
 }
 
 @keyframes battery-low {
   0% {
-    background: @red;
-    color: @base;
+    background: @color-battery-critical-0-background;
+    color: @color-battery-critical-0-foreground;
   }
   50% {
-    background: @surface1;
-    color: @text;
+    background: @color-battery-critical-50-background;
+    color: @color-battery-critical-50-foreground;
   }
   100% {
-    background: @red;
-    color: @base;
+    background: @color-battery-critical-100-background;
+    color: @color-battery-critical-100-foreground;
   }
 }

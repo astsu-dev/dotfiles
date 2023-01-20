@@ -2,8 +2,6 @@
 default_border pixel 2
 default_floating_border pixel 2 
 smart_borders on
-client.focused "#7287fd" "#7287fd" "#7287fd" "#7287fd"
-client.unfocused "#9ca0b0" "#9ca0b0" "#9ca0b0" "#9ca0b0"
 titlebar_border_thickness 0 
 titlebar_padding 0
 

@@ -38,25 +38,35 @@ git clone https://github.com/astsu-dev/dotfiles.git && cd dotfiles
 Install (**warning**: it installs many additional dependencies for my needs):
 
 ```shell
-chmod +x ./install/*
+cd install
 ```
 
 ```shell
-./install/install.sh
+chmod +x *
+```
+
+```shell
+./install.sh
 ```
 
 ## Switch theme
 
-To dark:
+Catppuccin Macchiato:
 
 ```shell
-./to_dark.sh
+./to_catppuccin_macchiato.sh
 ```
 
-To light:
+Catppuccin Latte:
 
 ```shell
-./to_light.sh
+./to_catppuccin_latte.sh
+```
+
+Rose Pine Dawn:
+
+```shell
+./to_rose_pine_dawn.sh
 ```
 
 ## Thanks

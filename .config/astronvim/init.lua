@@ -1,5 +1,5 @@
 local config = {
-  colorscheme = "catppuccin-macchiato",
+  colorscheme = "catppuccin-latte",
   options = {
     opt = {
       wrap = true

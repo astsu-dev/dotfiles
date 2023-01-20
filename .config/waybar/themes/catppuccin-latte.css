@@ -1,0 +1,80 @@
+@define-color base #eff1f5;
+@define-color crust #dce0e8;
+@define-color surface0 #ccd0da;
+@define-color surface1 #bcc0cc;
+@define-color overlay2 #7c7f93;
+@define-color text #4c4f69;
+@define-color yellow #df8e1d;
+@define-color peach #fe640b;
+@define-color green #40a02b;
+@define-color mauve #8839ef;
+@define-color blue #1e66f5;
+@define-color red #d20f39;
+@define-color lavender #7287fd;
+@define-color sky #04a5e5;
+@define-color pink #ea76cb;
+@define-color rosewater #dc8a78;
+@define-color flamingo #dd7878;
+
+/* Bar background */
+@define-color color-bar-background @crust;
+
+/* Tile background */
+@define-color color-tile-background @surface0;
+
+/* Launcher foreground */
+@define-color color-launcher-foreground @yellow;
+
+/* Workspace */
+@define-color color-workspace-inactive-foreground @overlay2;
+@define-color color-workspace-active-foreground @text;
+
+/* Clock foreground */
+@define-color color-clock-foreground @text;
+
+/* Bitcoin price foreground */
+@define-color color-bitcoin-foreground @peach;
+
+/* Break foreground */
+@define-color color-break-inactive-foreground @text;
+@define-color color-break-active-foreground @yellow;
+
+/* Volume foreground */
+@define-color color-volume-foreground @text;
+
+/* Brightness foreground */
+@define-color color-brightness-foreground @text;
+
+/* Network */
+@define-color color-network-connected-foreground @green;
+@define-color color-network-disconnected-foreground @red;
+
+/* CPU */
+@define-color color-cpu-foreground @mauve;
+@define-color color-cpu-temperature-normal-foreground @blue;
+@define-color color-cpu-temperature-critical-foreground @red;
+
+/* RAM */
+@define-color color-ram-foreground @yellow;
+
+/* Battery */
+@define-color color-battery-foreground @text;
+@define-color color-battery-charging-foreground @rosewater;
+/* Critical battery 0% background animation color */
+@define-color color-battery-critical-0-background @red;
+/* Critical battery 50% background animation color */
+@define-color color-battery-critical-50-background @crust;
+/* Critical battery 100% background animation color */
+@define-color color-battery-critical-100-background @red;
+/* Critical battery 0% foreground animation color */
+@define-color color-battery-critical-0-foreground @base;
+/* Critical battery 50% foreground animation color */
+@define-color color-battery-critical-50-foreground @text;
+/* Critical battery 100% foreground animation color */
+@define-color color-battery-critical-100-foreground @base;
+
+/* Language */
+@define-color color-language-foreground @text;
+
+/* Power button */
+@define-color color-power-button-foreground @red;

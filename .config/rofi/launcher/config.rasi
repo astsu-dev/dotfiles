@@ -16,7 +16,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "../colors/catppuccin-macchiato.rasi"
+@import                          "../colors/rose-pine-dawn.rasi"
 
 * {
     font: "JetBrains Mono 10";
