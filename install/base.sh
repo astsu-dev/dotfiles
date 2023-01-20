@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Base settings for pc and laptop
 
 # Install packages
@@ -52,6 +52,7 @@ sudo pacman -Sy \
 # Install yay - aur helper
 git clone https://aur.archlinux.org/yay.git yay && cd yay && makepkg -si
 
+yay -S discord
 # yay -S rofi-lbonn-wayland
 # rofi-lbonn-wayland - rofi app runner wayland version
 
