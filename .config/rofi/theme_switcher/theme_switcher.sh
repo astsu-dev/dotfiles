@@ -45,11 +45,11 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == 'catppuccin-macchiato' ]]; then
-			~/dotfiles/to_catppuccin_macchiato.sh
+			~/.config/scripts/theme_switcher/themes/to_catppuccin_macchiato.sh
 		elif [[ $1 == 'catppuccin-latte' ]]; then
-			~/dotfiles/to_catppuccin_latte.sh
+			~/.config/scripts/theme_switcher/themes/to_catppuccin_latte.sh
 		elif [[ $1 == 'rose-pine-dawn' ]]; then
-			~/dotfiles/to_rose_pine_dawn.sh
+			~/.config/scripts/theme_switcher/themes/to_rose_pine_dawn.sh
 		fi
 	else
 		exit 0
