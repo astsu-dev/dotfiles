@@ -10,6 +10,7 @@ set $right l
 set $term alacritty
 set $menu ~/.config/scripts/launcher.sh
 set $powermenu ~/.config/scripts/powermenu.sh
+set $theme_switcher ~/.config/scripts/theme_switcher.sh
 set $wallpaper ~/wallpapers/wallpaper.png
 
 set $display1 eDP-1

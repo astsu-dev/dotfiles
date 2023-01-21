@@ -23,7 +23,8 @@ cp ~/.config/mako/rose-pine-dawn ~/.config/mako/config
 
 # rofi
 sed -i 's|colors/.\+"|colors/rose-pine-dawn.rasi"|' ~/.config/rofi/launcher/config.rasi &&
-sed -i 's|colors/.\+"|colors/rose-pine-dawn.rasi"|' ~/.config/rofi/powermenu/config.rasi
+  sed -i 's|colors/.\+"|colors/rose-pine-dawn.rasi"|' ~/.config/rofi/powermenu/config.rasi
+  sed -i 's|colors/.\+"|colors/rose-pine-dawn.rasi"|' ~/.config/rofi/theme_switcher/config.rasi
 
 # bat
 sed -i 's/--theme=".\+"/--theme="Catppuccin-latte"/' ~/.config/bat/config

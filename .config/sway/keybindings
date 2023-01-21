@@ -12,6 +12,9 @@ bindsym --to-code $mod+y exec $menu
 # Start your powermenu
 bindsym --to-code $mod+p exec $powermenu
 
+# Start theme switcher
+bindsym --to-code $mod+t exec $theme_switcher
+
 # Drag floating windows by holding down $mod and left mouse button. For inverse behavior set `inverse`.
 floating_modifier $mod normal
 

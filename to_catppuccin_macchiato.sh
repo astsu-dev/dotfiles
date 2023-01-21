@@ -23,7 +23,8 @@ cp ~/.config/mako/catppuccin-macchiato ~/.config/mako/config
 
 # rofi
 sed -i 's|colors/.\+"|colors/catppuccin-macchiato.rasi"|' ~/.config/rofi/launcher/config.rasi &&
-sed -i 's|colors/.\+"|colors/catppuccin-macchiato.rasi"|' ~/.config/rofi/powermenu/config.rasi
+  sed -i 's|colors/.\+"|colors/catppuccin-macchiato.rasi"|' ~/.config/rofi/powermenu/config.rasi
+  sed -i 's|colors/.\+"|colors/catppuccin-macchiato.rasi"|' ~/.config/rofi/theme_switcher/config.rasi
 
 # bat
 sed -i 's/--theme=".\+"/--theme="Catppuccin-macchiato"/' ~/.config/bat/config

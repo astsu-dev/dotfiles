@@ -23,7 +23,8 @@ cp ~/.config/mako/catppuccin-latte ~/.config/mako/config
 
 # rofi
 sed -i 's|colors/.\+"|colors/catppuccin-latte.rasi"|' ~/.config/rofi/launcher/config.rasi &&
-sed -i 's|colors/.\+"|colors/catppuccin-latte.rasi"|' ~/.config/rofi/powermenu/config.rasi
+  sed -i 's|colors/.\+"|colors/catppuccin-latte.rasi"|' ~/.config/rofi/powermenu/config.rasi
+  sed -i 's|colors/.\+"|colors/catppuccin-latte.rasi"|' ~/.config/rofi/theme_switcher/config.rasi
 
 # bat
 sed -i 's/--theme=".\+"/--theme="Catppuccin-latte"/' ~/.config/bat/config

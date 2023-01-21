@@ -1,5 +1,5 @@
 # Greeting
-set -gx fish_greeting 'Hi, bro! You\'re the best!'
+set -gx fish_greeting ''
 
 # Aliases
 alias to=cd
