@@ -10,7 +10,7 @@ sed -i "s|include colorschemes/.\+|include colorschemes/rose-pine-dawn|" ~/.conf
 sed -i 's|"themes/.\+"|"themes/rose-pine-dawn.css"|' ~/.config/waybar/style.css
 
 # Wallpaper
-cp ~/wallpapers/symbol-rose-pine-dawn.png ~/wallpapers/wallpaper.png
+cp ~/wallpapers/leaf-rose-pine-dawn.png ~/wallpapers/wallpaper.png
 
 # fish
 cp ~/.config/fish/mythemes/rose-pine-dawn.fish ~/.config/fish/conf.d/theme.fish
