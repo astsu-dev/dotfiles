@@ -43,7 +43,9 @@ local config = {
     treesitter = {
       rainbow = {
         enable = false
-      }
+      },
+      ensure_installed = { "lua", "python", "javascript", "typescript", "rust", "c",
+        "html", "css", "json", "dockerfile", "prisma", "markdown", "yaml", "bash", "fish", }
     }
   },
 }
