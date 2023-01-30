@@ -9,3 +9,4 @@ keymap:
       CapsLock-u: Home
       CapsLock-o: End
       CapsLock-apostrophe: Delete
+      CapsLock-p: Print
