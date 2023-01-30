@@ -10,3 +10,6 @@ keymap:
       CapsLock-o: End
       CapsLock-apostrophe: Delete
       CapsLock-p: Print
+      CapsLock-q: PreviousSong
+      CapsLock-w: PlayPause
+      CapsLock-e: NextSong
