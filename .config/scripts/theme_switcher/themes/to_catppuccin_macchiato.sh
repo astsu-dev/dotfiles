@@ -10,7 +10,7 @@ sed -i "s|include colorschemes/.\+|include colorschemes/macchiato|" ~/.config/sw
 sed -i 's|"themes/.\+"|"themes/catppuccin-macchiato.css"|' ~/.config/waybar/style.css
 
 # Wallpaper
-cp ~/wallpapers/ghost-carrot-catppuccin-macchiato.png ~/wallpapers/wallpaper.png
+cp ~/wallpapers/leaf-catppuccin-macchiato-overlay1.png ~/wallpapers/wallpaper.png
 
 # fish
 cp ~/.config/fish/mythemes/catppuccin-macchiato.fish ~/.config/fish/conf.d/theme.fish
