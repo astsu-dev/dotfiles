@@ -1,53 +1,46 @@
 local config = {
-  colorscheme = "catppuccin-latte",
-  options = {
-    opt = {
-      wrap = true
+    colorscheme = "catppuccin-latte",
+    options = {
+        opt = {
+            wrap = true,
+        },
     },
-  },
-  mappings = {
-    n = {
-      ["<Tab>"] = { "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
-      ["<S-Tab>"] = { "<cmd>BufferLineCyclePrev<cr>", desc = "Prev buffer" },
-      ["<C-Bslash>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle term" },
+    mappings = {
+        n = {
+            ["L"] = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+                desc = "Next buffer" },
+            ["H"] = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+                desc = "Previous buffer" },
+        },
     },
-  },
-  lsp = {
-    formatting = {
-      disabled = {
-        "tsserver",
-      },
+    lsp = {
+        formatting = {
+            disabled = {
+                "tsserver",
+            },
+        },
     },
-  },
-  plugins = {
-    init = {
-      {
-        "catppuccin/nvim",
-        as = "catppuccin",
-        config = function()
-          require("catppuccin").setup { transparent_background = true }
-        end,
-      },
-      {
-        "ray-x/lsp_signature.nvim",
-        event = "BufRead",
-        config = function()
-          require("lsp_signature").setup()
-        end,
-      },
-      {
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-      }
+    plugins = {
+        {
+            "catppuccin/nvim",
+            as = "catppuccin",
+            lazy = false,
+            config = function()
+                require("catppuccin").setup { transparent_background = true }
+            end,
+        },
+        {
+            "ray-x/lsp_signature.nvim",
+            event = "BufRead",
+            config = function()
+                require("lsp_signature").setup()
+            end,
+        },
+        {
+            "iamcco/markdown-preview.nvim",
+            run = function() vim.fn["mkdp#util#install"]() end,
+        }
     },
-    treesitter = {
-      rainbow = {
-        enable = false
-      },
-      ensure_installed = { "lua", "python", "javascript", "typescript", "rust", "c",
-        "html", "css", "json", "dockerfile", "prisma", "markdown", "yaml", "bash", "fish", }
-    }
-  },
 }
 
 return config
