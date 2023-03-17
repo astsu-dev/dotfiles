@@ -1,2 +1,2 @@
-client.focused "#939ab7" "#939ab7" "#939ab7" "#939ab7" # overlay2
-client.unfocused "#6e738d" "#6e738d" "#6e738d" "#6e738d" # overlay0
+client.focused "#939ab7" "#939ab7" "#939ab7" "#939ab7"
+client.unfocused "#6e738d" "#6e738d" "#6e738d" "#6e738d"
