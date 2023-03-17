@@ -39,8 +39,12 @@ local config = {
         {
             "iamcco/markdown-preview.nvim",
             run = function() vim.fn["mkdp#util#install"]() end,
+        },
+        {
+            "rcarriga/nvim-notify",
+            enabled = false
         }
-    },
+    }
 }
 
 return config
