@@ -52,8 +52,9 @@ sudo pacman -Sy \
 # Install yay - aur helper
 git clone https://aur.archlinux.org/yay.git yay && cd yay && makepkg -si
 
-yay -S discord
+yay -S discord hyprpicker
 # yay -S rofi-lbonn-wayland
+# hyprpicker - wayland color picker
 # rofi-lbonn-wayland - rofi app runner wayland version
 
 # Config
