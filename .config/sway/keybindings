@@ -95,6 +95,10 @@ bindsym --to-code $mod+Shift+0 move container to workspace number 10
 
 # ## Take a screenshot
 bindsym --to-code Print exec grim -g "$(slurp -d)" - | wl-copy
+bindsym --to-code Shift+Print exec grim - | wl-copy
+
+# ## Color picker
+bindsym --to-code $mod+n exec hyprpicker -f hex -a
 
 # ## Layout stuff:
 bindsym --to-code $mod+b splith
