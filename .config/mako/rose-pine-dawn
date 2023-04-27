@@ -2,7 +2,7 @@ default-timeout=5000
 font=FiraSans 11
 
 padding=12
-border-radius=0
+border-radius=5
 
 # Colors
 

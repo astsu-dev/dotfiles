@@ -2,14 +2,14 @@ default-timeout=5000
 font=FiraSans 11
 
 padding=12
-border-radius=0
+border-radius=5
 
 # Colors
 
-background-color=#faf4ed
-text-color=#575279
-border-color=#cecacd
+background-color=#24273a
+text-color=#cad3f5
+border-color=#b7bdf8
 progress-color=over #302D41
 
 [urgency=high]
-border-color=#ea9d34
+border-color=#f5a97f
