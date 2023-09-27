@@ -1,8 +1,12 @@
 local config = {
-    colorscheme = "catppuccin-latte",
+    colorscheme = "catppuccin-macchiato",
     options = {
         opt = {
             wrap = true,
+        },
+        g = {
+            copilot_no_tab_map = true,
+            copilot_assume_mapped = true,
         },
     },
     mappings = {
@@ -12,11 +16,15 @@ local config = {
             ["H"] = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
                 desc = "Previous buffer" },
         },
+        i = {
+            ["<C-\\>"] = { 'copilot#Accept("")', silent = true, expr = true, noremap = true, replace_keycodes = false },
+        }
     },
     lsp = {
         formatting = {
             disabled = {
                 "tsserver",
+                "html",
             },
         },
     },
@@ -38,11 +46,18 @@ local config = {
         },
         {
             "iamcco/markdown-preview.nvim",
-            run = function() vim.fn["mkdp#util#install"]() end,
+            ft = "markdown",
+            build = function()
+              vim.fn["mkdp#util#install"]()
+            end,
         },
         {
             "rcarriga/nvim-notify",
-            enabled = false
+            enabled = false,
+        },
+        {
+            "github/copilot.vim",
+            lazy = false,
         }
     }
 }
