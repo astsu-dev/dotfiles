@@ -18,6 +18,7 @@ return {
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		local border = "single"
+		local max_item_count = 10
 
 		cmp.setup({
 			-- completion = {
@@ -39,10 +40,10 @@ return {
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" }, -- snippets
-				{ name = "buffer" }, -- text within current buffer
-				{ name = "path" }, -- file system paths
+				{ name = "nvim_lsp", priority = 1000, max_item_count = max_item_count },
+				{ name = "luasnip", priority = 750, max_item_count = max_item_count }, -- snippets
+				{ name = "buffer", priority = 500, max_item_count = max_item_count }, -- text within current buffer
+				{ name = "path", priority = 250, max_item_count = max_item_count }, -- file system paths
 			}),
 			window = {
 				completion = { border = border },

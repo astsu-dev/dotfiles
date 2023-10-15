@@ -27,7 +27,7 @@ return {
 
 			-- Diagnostics customization
 			vim.diagnostic.config({
-				update_in_insert = true,
+				update_in_insert = false,
 				float = { border = border },
 			})
 			-- Set diagnostics symbols in the sign column (gutter)
@@ -53,7 +53,7 @@ return {
 					-- See `:help vim.lsp.*` for documentation on any of the below functions
 					local opts = { buffer = ev.buf }
 					vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+					vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 					vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
