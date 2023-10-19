@@ -40,7 +40,7 @@ return {
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp", priority = 1000, max_item_count = max_item_count },
+				{ name = "nvim_lsp", priority = 1000 },
 				{ name = "luasnip", priority = 750, max_item_count = max_item_count }, -- snippets
 				{ name = "buffer", priority = 500, max_item_count = max_item_count }, -- text within current buffer
 				{ name = "path", priority = 250, max_item_count = max_item_count }, -- file system paths
