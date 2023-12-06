@@ -1,4 +1,32 @@
-local lsp_servers = { "lua_ls", "tsserver", "eslint" }
+local create_lsp_format_on_save_autocmd = function(bufnr)
+	vim.api.nvim_create_autocmd("BufWritePre", {
+		buffer = bufnr,
+		callback = function()
+			vim.lsp.buf.format()
+		end,
+	})
+end
+
+local lsp_servers = {
+	lua_ls = {},
+	tsserver = {},
+	eslint = {
+		on_attach = function(_, bufnr)
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				buffer = bufnr,
+				command = "EslintFixAll",
+			})
+		end,
+	},
+	tailwindcss = {},
+	prismals = {},
+	pyright = {},
+	ruff_lsp = {
+		on_attach = function(_, bufnr)
+			create_lsp_format_on_save_autocmd(bufnr)
+		end,
+	},
+}
 local border = "single"
 
 return {
@@ -21,8 +49,12 @@ return {
 			-- Setup language servers
 			local lspconfig = require("lspconfig")
 
-			for _, lsp in ipairs(lsp_servers) do
-				lspconfig[lsp].setup({ handlers = handlers, capabilities = cmp_capabilities })
+			for lsp, config in pairs(lsp_servers) do
+				lspconfig[lsp].setup({
+					handlers = handlers,
+					capabilities = cmp_capabilities,
+					on_attach = config.on_attach,
+				})
 			end
 
 			-- Diagnostics customization

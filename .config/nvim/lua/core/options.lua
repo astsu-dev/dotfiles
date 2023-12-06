@@ -18,15 +18,18 @@ vim.opt.smartindent = true
 
 vim.opt.signcolumn = "yes"
 vim.opt.fillchars = {
-    vert = "│",
-    fold = "⠀",
-    eob = " ", -- suppress ~ at EndOfBuffer
-    -- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
-    msgsep = "‾",
-    foldopen = "▾",
-    foldsep = "│",
-    foldclose = "▸"
+	vert = "│",
+	fold = "⠀",
+	eob = " ", -- suppress ~ at EndOfBuffer
+	-- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
+	msgsep = "‾",
+	foldopen = "▾",
+	foldsep = "│",
+	foldclose = "▸",
 }
+
+-- Swap
+vim.opt.swapfile = false
 
 vim.opt.shell = "/opt/homebrew/bin/fish"
 vim.opt.mouse = "a"
