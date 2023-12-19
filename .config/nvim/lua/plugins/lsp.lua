@@ -27,6 +27,11 @@ local lsp_servers = {
 		end,
 	},
 }
+local lsp_servers_list = {}
+for lsp, _ in pairs(lsp_servers) do
+	table.insert(lsp_servers_list, lsp)
+end
+
 local border = "single"
 
 return {
@@ -106,7 +111,7 @@ return {
 		config = function()
 			require("mason").setup()
 			require("mason-lspconfig").setup({
-				ensure_installed = lsp_servers,
+				ensure_installed = lsp_servers_list,
 			})
 		end,
 	},

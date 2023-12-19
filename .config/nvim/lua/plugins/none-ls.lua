@@ -30,7 +30,8 @@ return {
 			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
 			-- setup formatters & linters
 			sources = {
-				formatting.prettierd,
+				-- TODO: prettierd is disabled for work project
+				-- formatting.prettierd,
 				formatting.stylua,
 			},
 			-- configure format on save
