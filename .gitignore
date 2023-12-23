@@ -9,3 +9,4 @@
 # cmus
 .config/cmus/*
 !.config/cmus/*.theme
+.DS_Store
