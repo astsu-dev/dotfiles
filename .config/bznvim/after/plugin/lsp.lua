@@ -60,5 +60,10 @@ require("mason-lspconfig").setup({
         on_init = disable_client_formatting,
       })
     end,
+    lua_ls = function()
+      -- Use lsp-zero lua_ls configuration to disable errors in lua files
+      local lua_ls_opts = lsp_zero.nvim_lua_ls()
+      lspconfig.lua_ls.setup(lua_ls_opts)
+    end,
   },
 })

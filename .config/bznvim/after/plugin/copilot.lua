@@ -23,5 +23,6 @@ copilot.setup({
     html = true,
     css = true,
     markdown = true,
+    lua = true,
   },
 })
