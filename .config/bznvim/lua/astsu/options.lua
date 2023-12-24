@@ -19,15 +19,3 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.smartindent = true
 
--- Mappings
-vim.keymap.set("i", "jk", "<esc>", { noremap = true })
-
--- Splits mappings
-vim.keymap.set("n", "|", "<cmd>vsplit<CR>")
-vim.keymap.set("n", "\\", "<cmd>split<CR>")
-
--- Move cursor between windows
-vim.keymap.set("n", "<c-h>", "<cmd>wincmd h<CR>")
-vim.keymap.set("n", "<c-j>", "<cmd>wincmd j<CR>")
-vim.keymap.set("n", "<c-k>", "<cmd>wincmd k<CR>")
-vim.keymap.set("n", "<c-l>", "<cmd>wincmd l<CR>")
