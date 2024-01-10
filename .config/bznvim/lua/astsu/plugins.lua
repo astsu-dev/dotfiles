@@ -50,4 +50,6 @@ return {
   },
   { "lewis6991/gitsigns.nvim" },
   { "zbirenbaum/copilot.lua" },
+  { "nvim-lualine/lualine.nvim" },
+  { "numToStr/Comment.nvim" },
 }
