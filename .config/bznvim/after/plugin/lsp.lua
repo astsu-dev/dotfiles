@@ -54,6 +54,8 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "jsonls",
     "gopls",
+    "tailwindcss",
+    "golangci_lint_ls",
   },
   handlers = {
     lsp_zero.default_setup,
@@ -63,17 +65,25 @@ require("mason-lspconfig").setup({
       })
     end,
     lua_ls = function()
-      -- Use lsp-zero lua_ls configuration to disable errors in lua files
+      -- Use lsp-zero lua_ls configuration to disable errors in neovim lua files
       local lua_ls_opts = lsp_zero.nvim_lua_ls()
       lspconfig.lua_ls.setup(lua_ls_opts)
     end,
     -- Comment this to enable eslint lsp
-    eslint = function()
-      lspconfig.eslint.setup({
-        handlers = {
-          ["textDocument/publishDiagnostics"] = function() end,
-        }
-      })
-    end,
+    -- eslint = function()
+    --   lspconfig.eslint.setup({
+    --     handlers = {
+    --       ["textDocument/publishDiagnostics"] = function() end,
+    --     }
+    --   })
+    -- end,
+  },
+})
+
+local null_ls = require("null-ls")
+null_ls.setup({
+  sources = {
+    null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.stylua,
   },
 })
