@@ -6,6 +6,7 @@ alias to=cd
 alias lr=clear
 alias ports="netstat -an | grep LISTEN"
 alias upgrade="brew list --formulae | xargs brew upgrade && brew list --cask | xargs brew upgrade --cask"
+alias uuid='uuidgen | tr "[:upper:]" "[:lower:]"'
 
 # Pyenv init
 pyenv init - | source
