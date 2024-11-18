@@ -55,20 +55,21 @@ end
 require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"tsserver",
+		"ts_ls",
 		"pyright",
-		"ruff_lsp",
+		"ruff",
 		"eslint",
 		"lua_ls",
 		"jsonls",
 		"gopls",
 		"tailwindcss",
-		"golangci_lint_ls",
+		"dockerls",
+		"docker_compose_language_service",
 	},
 	handlers = {
 		lsp_zero.default_setup,
-		tsserver = function()
-			lspconfig.tsserver.setup({
+		ts_ls = function()
+			lspconfig.ts_ls.setup({
 				on_init = disable_client_formatting,
 			})
 		end,
@@ -93,5 +94,6 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.prettier,
 		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.diagnostics.golangci_lint,
 	},
 })

@@ -1,4 +1,3 @@
-import = ["/Users/astsu/.config/alacritty/themes/gruvbox_light.toml"]
 
 [font]
 size = 14.0
@@ -7,7 +6,7 @@ size = 14.0
 family = "FiraCode Nerd Font"
 style = "Medium"
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/fish"
 
 [window]
@@ -18,3 +17,8 @@ startup_mode = "Maximized"
 [window.padding]
 x = 8
 y = 8
+
+[general]
+import = ["/Users/astsu/.config/alacritty/themes/catppuccin-mocha.toml"]
+
+[terminal]

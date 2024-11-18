@@ -1,7 +1,7 @@
 return {
 	{
 		"catppuccin/nvim",
-		enabled = false,
+		enabled = true,
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
@@ -31,18 +31,8 @@ return {
 		end,
 	},
 	{
-		"projekt0n/github-nvim-theme",
-		enabled = false,
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("github-theme").setup()
-			vim.cmd("colorscheme github_light")
-		end,
-	},
-	{
 		"ellisonleao/gruvbox.nvim",
-		enabled = true,
+		enabled = false,
 		priority = 1000,
 		config = function()
 			require("gruvbox").setup({

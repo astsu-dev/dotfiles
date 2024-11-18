@@ -16,3 +16,7 @@ nvm use 18.16.0 > /dev/null
 
 # zoxide
 zoxide init fish | source
+
+# asdf init
+# source ~/.asdf/asdf.fish
+# source ~/.asdf/plugins/golang/set-env.fish
